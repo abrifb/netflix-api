@@ -28,9 +28,9 @@ const server = http.createServer(async (req, res) => {
         return res.end(js);
     }
 
-    // =============================
+   
     // GET
-    // =============================
+   
     if (req.method === 'GET' && pathname === '/catalogo') {
 
         if (!query.tipo) {
@@ -70,9 +70,9 @@ const server = http.createServer(async (req, res) => {
         }
     }
 
-    // =============================
+   
     // POST
-    // =============================
+   
     if (req.method === 'POST' && pathname === '/catalogo') {
 
         let body = '';
@@ -117,9 +117,8 @@ const server = http.createServer(async (req, res) => {
         return;
     }
 
-    // =============================
     // DELETE
-    // =============================
+
     if (req.method === 'DELETE' && pathname === '/catalogo') {
 
         if (!query.tipo || !query.nombre) {
@@ -150,9 +149,8 @@ const server = http.createServer(async (req, res) => {
         return;
     }
 
-    // =============================
     // MÉTODO NO PERMITIDO
-    // =============================
+    
     res.writeHead(405);
     res.end(JSON.stringify({ error: "Método no permitido" }));
 });
