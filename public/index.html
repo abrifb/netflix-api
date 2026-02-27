@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Catálogo Netflix</title>
+</head>
+<body>
+
+    <h1>Catálogo Netflix</h1>
+
+    <button onclick="cargarPeliculas()">LISTA DE PELÍCULAS</button>
+    <button onclick="cargarSeries()">LISTA DE SERIES</button>
+
+    <select id="orden" onchange="ordenar()">
+        <option value="">Ordenar por...</option>
+        <option value="nombre">Nombre</option>
+        <option value="anio">Año</option>
+        <option value="director">Director (películas)</option>
+        <option value="temporadas">Temporadas (series)</option>
+    </select>
+
+    <ul id="lista"></ul>
+
+    <h2>Agregar Película</h2>
+        <input id="pNombre" placeholder="Nombre">
+        <input id="pDirector" placeholder="Director">
+        <input id="pAnio" placeholder="Año">
+        <button onclick="agregarPelicula()">AGREGAR NUEVA PELÍCULA</button>
+
+    <h2>Agregar Serie</h2>
+        <input id="sNombre" placeholder="Nombre">
+        <input id="sAnio" placeholder="Año">
+        <input id="sTemp" placeholder="Temporadas">
+        <button onclick="agregarSerie()">AGREGAR NUEVA SERIE</button>
+
+    <script src="app.js"></script>
+    </body>
+</html>
